@@ -1,3 +1,9 @@
+.logo{
+    width: 6em;
+    height: 3em;
+    object-fit: fill;
+}
+
 .stekjes, img{
     width: 40em;
 }
