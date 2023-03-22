@@ -1,0 +1,22 @@
+<%- include('./partials/head') %>
+
+<!-- inladen van de header -->
+<%- include('./partials/header') %>
+
+<main>
+    <h1>Info plantje</h1>
+
+    <section>
+        <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
+            height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
+        <h2><%= stekje.naam %></h2>
+        <p>Land van herkomst: <%= stekje.landvanherkomst %></p>
+        <p>Giftig: <%= stekje.giftig %></p>
+        <p>Verpotten: <%= stekje.verpotten %></p>
+        <p>Voeding: <%= stekje.voeding %></p>
+        <p>Aanmelddatum: <%= stekje.aanmelddatum %></p>
+    </section>
+</main>
+
+
+<%- include('./partials/foot') %>
