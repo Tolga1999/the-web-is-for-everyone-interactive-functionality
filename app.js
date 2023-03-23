@@ -37,6 +37,11 @@ app.get('/stekjes', async function (request, response) {
   response.render('plant', data)
 })
 
+app.get('/admin', async function (request, response) {
+
+  response.render('admin')
+})
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
 

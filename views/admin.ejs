@@ -1,0 +1,42 @@
+<%- include('./partials/head') %>
+
+<!-- inladen van de header -->
+<%- include('./partials/header') %>
+
+<main>
+    <h1>Voeg hier je nieuwe plantje toe!</h1>
+
+    <h2>Plant gegevens</h2>
+    <form action="" method="post">
+        <div>
+            <label for="date">Aanmelddatum: <input type="text" name="date"></label>
+        </div>
+        <div>
+            <label for="name">Naam: <input type="text" name="name" required></label>
+        </div>
+        <div>
+            <label for="country">Land van herkomst: <input type="text" name="country"></label>
+        </div>
+        <div>
+            <label for="poisonous">Giftig: <input type="text" name="poisonous" required></label>
+        </div>
+        <div>
+            <label for="slug">Slug (voorbeeld: calathea-fusion-white"): <input type="text" name="slug"></label>
+        </div>
+        <div>
+            <label for="repot">Verpotten: <input type="text" name="repot"></label>
+        </div>
+        <div>
+            <label for="nutrition">Voeding: <input type="text" name="nutrition"></label>
+        </div>
+        <div>
+            <label for="picture">Foto's: <input type="text" name="picture" required></label>
+        </div>
+        <div>
+            <input type="submit" value="Voeg plantje toe">
+        </div>
+    </form>
+</main>
+
+
+<%- include('./partials/foot') %>
