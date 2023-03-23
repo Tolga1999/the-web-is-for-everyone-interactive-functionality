@@ -59,6 +59,11 @@ app.post('/submitted', function (request, response) {
   })
 })
 
+// FALLBACK - catched elke andere request dat buiten de huidige routes valt
+app.get('*', (request, response) => {
+  response.render('errors/404');
+});
+
 // Stel het poortnummer in waar express op gaat luisteren
 app.set('port', process.env.PORT || 8000)
 
