@@ -7,8 +7,13 @@
     <h1>Info plantje</h1>
 
     <section>
-        <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
+        <% if (stekje.fotos[0]) { %>
+            <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
             height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
+        <% }else{ %>
+            <!-- anders een placeholder -->
+            <img src="./assets/plant2.jpg">
+        <% } %>
         <h2><%= stekje.naam %></h2>
         <p>Land van herkomst: <%= stekje.landvanherkomst %></p>
         <p>Giftig: <%= stekje.giftig %></p>
