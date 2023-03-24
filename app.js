@@ -1,5 +1,5 @@
 // Importeer express uit de node_modules map
-import express from 'express'
+import express, { application } from 'express'
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -13,6 +13,10 @@ app.set('views', './views')
 
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
+
+// Stel afhandeling van formulieren in (BEKIJK DEZE CODE NOG)
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // Maak een route voor de index
 app.get('/', async function (request, response) {
@@ -45,7 +49,9 @@ app.post('/submitted', function (request, response) {
 
   const urlStekjes = baseUrl + "/stekjes"
 
-  console.log(request.body)
+  console.log(request)
+
+  console.log(urlStekjes)
 
   postJson(urlStekjes, request.body).then((data) => {
 
@@ -59,7 +65,7 @@ app.post('/submitted', function (request, response) {
   })
 })
 
-// FALLBACK - catched elke andere request dat buiten de huidige routes valt
+// FALLBACK - catched elke andere request dat buiten de huidige routes valt, PLAATS DIT ONDERAAN
 app.get('*', (request, response) => {
   response.render('errors/404');
 });
@@ -73,7 +79,7 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-// POST FUNCTION
+// POST FUNCTION (BEKIJK DEZE CODE NOG)
 
 /**
  * postJson() is a wrapper for the experimental node fetch api. It fetches the url
