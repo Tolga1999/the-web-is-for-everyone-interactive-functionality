@@ -42,14 +42,15 @@ app.get('/stekjes', async function (request, response) {
 })
 
 app.get('/admin', function (request, response) {
-  response.render('admin')
+  // geef variable mee genaamd plantjePosted (zodat het niet not defined meegeeft)
+  response.render('admin', {plantjePosted: request.query.plantjePosted})
 })
 
 app.post('/submitted', function (request, response) {
 
   const urlStekjes = baseUrl + "/stekjes"
 
-  console.log(request)
+  console.log(request.body)
 
   console.log(urlStekjes)
 
@@ -57,6 +58,7 @@ app.post('/submitted', function (request, response) {
 
     if (data.success) {
       response.redirect('/admin?plantjePosted=true')
+      console.log(request.query)
     } else {
       console.log('er gaat wat mis :(')
 
