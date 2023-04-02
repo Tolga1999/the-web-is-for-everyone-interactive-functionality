@@ -47,7 +47,7 @@ header>nav ul {
     list-style: none;
 }
 
-header > nav ul li a{
+header>nav ul li a {
     color: var(--text-color-white);
 }
 
@@ -64,21 +64,95 @@ header > nav ul li a{
     align-items: center;
 }
 
-.nav-icons li:nth-child(2), .nav-icons li:nth-child(3) {
+.nav-icons li:nth-child(2),
+.nav-icons li:nth-child(3) {
     margin-left: 0.5em;
 }
+
 /* icons end */
 /* header end */
 
-/* stekjes section */
-.stekjes,
-img {
-    width: 100%;
-    max-width: 40em;
+/* h1 kies plantje */
+.h1-kies-plantje {
+    background-color: var(--background-color-green);
+    padding: 1.75em 1.75em;
+    border-radius: 1.5em;
+    width: 20em;
+    margin: 2em auto;
 }
 
-img {
-    height: 30em;
-    object-fit: cover;
+.h1-kies-plantje h1 {
+    font-size: 2em;
 }
+
+.h1-kies-plantje p {
+    font-size: 0.9em;
+    margin-top: 0.33em;
+    line-height: 1.1em;
+}
+
+/* h1 kies plantje end */
+
 /* stekjes section */
+.stekje-container {
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    max-width: 20em;
+    border-radius: 1.5em;
+}
+
+.stekje-container a {
+    color: var(--text-color-white);
+    text-decoration: none;
+}
+
+.stekje-container img {
+    width: 100%;
+    height: 19em;
+    object-fit: cover;
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.stekje-name-container {
+    background-color: var(--background-color-green);
+    margin-top: -0.3em;
+    padding: 0.5em;
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+.stekje-container h2 {
+    font-size: 1.4em;
+    margin: 0.5em 0.5em 0.5em 0.75em;
+}
+
+/* desktop media query */
+@media screen and (min-width: 1020px) {
+    .h1-kies-plantje {
+        width: 35em;
+        margin: 2em 3em;
+    }
+
+    .h1-kies-plantje h1 {
+        font-size: 3em;
+    }
+
+    .h1-kies-plantje p {
+        font-size: 1.5em;
+    }
+
+    .stekjes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .stekje-container {
+        margin: 1em 3em;
+    }
+
+    .stekje-container img,
+    .stekje-name-container {
+        min-width: 24em;
+        max-width: 24em;
+    }
+}

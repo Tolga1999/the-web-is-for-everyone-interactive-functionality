@@ -4,23 +4,28 @@
 <%- include('./partials/header') %>
 
 <main>
-    <h1>Welkom bij plantswap</h1>
+    <section class="h1-kies-plantje">
+        <h1>Kies je plantje</h1>
+        <p>Wat voor plantje zou je graag willen? We hebben voor iedereen een plantje!</p>
+    </section>
 
     <section class="stekjes">
         <% stekjes.forEach(stekje => { %>
+        <section class="stekje-container">
         <a href="/stekjes?id=<%= stekje.id %>">
-            <section>
+            <% if (stekje.fotos[0]) { %>
+            <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
+                height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
+            <% }else{ %>
+            <!-- anders een placeholder -->
+            <img src="./assets/plant2.jpg">
+            <% } %>
+            <section class="stekje-name-container">
                 <h2><%= stekje.naam %></h2>
-                <% if (stekje.fotos[0]) { %>
-                    <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
-                    height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
-                <% }else{ %>
-                    <!-- anders een placeholder -->
-                    <img src="./assets/plant2.jpg">
-                <% } %>
             </section>
         </a>
-        <% }) %>
+    </section>
+    <% }) %>
     </section>
 </main>
 
