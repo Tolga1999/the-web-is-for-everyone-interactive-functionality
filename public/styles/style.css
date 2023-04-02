@@ -1,14 +1,84 @@
-.logo{
-    width: 6em;
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* Custom properties */
+:root {
+    --background-color-white: #FFF;
+    --background-color-black: #000000;
+    --background-color-blue: #333467;
+    --background-color-green: #4E7141;
+    --text-color-white: #FFF;
+}
+
+/* import fonts */
+
+/* inter regular */
+@font-face {
+    font-family: inter-regular;
+    src: url("../assets/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: inter-bold;
+    src: url("../assets/Inter-Bold.ttf");
+}
+
+body {
+    background-color: var(--background-color-white);
+    color: var(--text-color-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: inter-regular, Helvetica, sans-serif;
+}
+
+/* header */
+header {
+    background-color: var(--background-color-blue);
+    padding: 1em 1.5em;
+}
+
+header>nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header > nav ul li a{
+    color: var(--text-color-white);
+}
+
+.logo {
+    width: 100%;
+    max-width: 8em;
     height: 3em;
     object-fit: fill;
 }
 
-.stekjes, img{
-    width: 40em;
+/* icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
 }
 
-img{
+.nav-icons li:nth-child(2), .nav-icons li:nth-child(3) {
+    margin-left: 0.5em;
+}
+/* icons end */
+/* header end */
+
+/* stekjes section */
+.stekjes,
+img {
+    width: 100%;
+    max-width: 40em;
+}
+
+img {
     height: 30em;
     object-fit: cover;
 }
+/* stekjes section */
