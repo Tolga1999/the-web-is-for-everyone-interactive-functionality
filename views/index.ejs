@@ -6,10 +6,11 @@
 <main>
     <section class="homepage-container">
         <div class="h1-kies-plantje">
-            <h1>Kies een <span class="stekje-text-h1">stekje,</span> <br> Ruil je <span class="stekje-text-h1">stekje!</span></h1>
-            <p>Wat voor plantje zou je graag willen? We hebben voor iedereen een plantje!</p>
-            <input class="h1-input" type="text" placeholder="Wat voor plantje zoek je?">
-            <button class="h1-ruil-button">Ruil nu</button>
+            <h1>Kies een <span class="stekje-text-h1">stekje,</span> <br> Ruil je <span
+                    class="stekje-text-h1">stekje!</span></h1>
+            <p>Wat voor stekje zou je graag willen? We hebben voor iedereen een stekje!</p>
+            <input class="h1-input" type="text" placeholder="Wat voor stekje zoek je?">
+            <button class="h1-ruil-button">Zoek stekje</button>
         </div>
         <img class="homepage-image" src="./assets/homepagePlant.jpg" alt="homepagina plant">
     </section>
@@ -17,18 +18,20 @@
     <section class="stekjes">
         <% stekjes.forEach(stekje => { %>
         <section class="stekje-container">
-            <a href="/stekjes?id=<%= stekje.id %>">
-                <% if (stekje.fotos[0]) { %>
-                <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
-                    height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
-                <% }else{ %>
-                <!-- anders een placeholder -->
-                <img src="./assets/plant2.jpg">
-                <% } %>
-                <section class="stekje-name-container">
-                    <h2><%= stekje.naam %></h2>
-                </section>
-            </a>
+            <% if (stekje.fotos[0]) { %>
+            <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
+                height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
+            <% }else{ %>
+            <!-- anders een placeholder -->
+            <img src="./assets/plant2.jpg">
+            <% } %>
+            <div class="stekje-container-info">
+                <span>Populaire stekje</span>
+                <h2><%= stekje.naam %></h2>
+                <a href="/stekjes?id=<%= stekje.id %>">
+                    <p>Lees meer</p>
+                </a>
+            </div>
         </section>
         <% }) %>
     </section>
