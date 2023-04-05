@@ -12,6 +12,7 @@
     --background-color-blue: #333467;
     --background-color-green: #6A9C40;
     --background-color-grey: #EEEFF2;
+    --background-color-red: red;
     --text-color-white: #FFF;
     --text-color-black: #000000;
     --text-color-green: #6A9C40;
@@ -323,10 +324,12 @@ ul li a:hover{
 
 .input-field-text{
     padding: 0.4em;
+    width: 20em;
 }
 
 .input-field-text:invalid{
-    background-color: red;
+    border: 2px solid var(--background-color-red);
+    color: var(--text-color-white);
 }
 
 .add-stekje-input{

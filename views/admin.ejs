@@ -6,45 +6,49 @@
 <main>
     <!-- checkt of er iets posted is -->
     <% if(plantjePosted) { %>
-        <span class="span-posted">Posted</span>
+    <span class="span-posted">Posted</span>
     <% } else { %>
-        <span class="span-niet-posted">Niet posted</span>
-        <% } %>
+    <span class="span-niet-posted">Niet posted</span>
+    <% } %>
     <h1 class="admin-h1">Voeg hier je nieuwe plantje toe!</h1>
 
     <h2 class="admin-h2">Plant gegevens</h2>
     <form class="admin-form" action="/submitted" method="post">
         <div>
             <label for="datum">Aanmelddatum</label>
-            <input class="input-field-text" type="text" name="datum">
+            <input class="input-field-text" type="text" name="datum" placeholder="2023-02-07">
         </div>
         <div>
             <label for="naam">Naam<span class="must-input-field">*</span></label>
-            <input class="input-field-text" type="text" name="naam" required>
+            <input class="input-field-text" type="text" name="naam" placeholder="Philodendron scandens 'Heartleaf"
+                required>
         </div>
         <div>
             <label for="landvanherkomst">Land van herkomst</label>
-            <input class="input-field-text" type="text" name="landvanherkomst">
+            <input class="input-field-text" type="text" name="landvanherkomst" placeholder="Centraal en Zuid- Amerika">
         </div>
         <div>
             <label for="giftig">Giftig</label>
-            <input class="input-field-text" type="text" name="giftig">
+            <input class="input-field-text" type="text" name="giftig"
+                placeholder="Deze plant bevat calciumoxalaat, wat giftig is voor huisdieren bij inname.">
         </div>
         <div>
-            <label for="slug">Slug (voorbeeld: calathea-fusion-white")</label>
-            <input class="input-field-text" type="text" name="slug">
+            <label for="slug">Slug</label>
+            <input class="input-field-text" type="text" name="slug" placeholder="philodendron-scandens-heartleaf">
         </div>
         <div>
             <label for="verpotten">Verpotten</label>
-            <input class="input-field-text" type="text" name="verpotten">
+            <input class="input-field-text" type="text" name="verpotten"
+                placeholder="Eens in de paar jaar in het voorjaar verpotten.">
         </div>
         <div>
             <label for="voeding">Voeding</label>
-            <input class="input-field-text" type="text" name="voeding">
+            <input class="input-field-text" type="text" name="voeding"
+                placeholder="In de lente en zomer wekelijks plantenvoeding geven. In herfst en winter is dit niet nodig.">
         </div>
         <div>
             <label for="fotos">Foto's</label>
-            <input class="input-field-text" type="text" name="fotos">
+            <input class="input-field-text" type="text" name="fotos" placeholder="https://media.graphassets.com/59Zr7yKpTQhby52jNfgs">
         </div>
         <div>
             <input class="add-stekje-input" type="submit" value="Voeg plantje toe">
