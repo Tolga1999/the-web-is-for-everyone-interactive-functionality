@@ -30,12 +30,13 @@ app.get('/', async function (request, response) {
   response.render('index', data)
 })
 
-app.get('/stekjes', async function (request, response) {
+app.get('/stekje', async function (request, response) {
   // console log request dat is gemaakt met de anchor
-  console.log(request)
+  // console.log(request)
 
   // nieuwe url gemaakt met daarachter de nodige data voor de API request (zoals id)
   const urlId = baseUrl + '/stekjes?id=' + request.query.id
+  // maak een nieuwe const en fetch nu de unieke stekje met de url + de meegegeven id
   const data = await fetch(urlId).then(response => response.json());
 
   response.render('plant', data)
