@@ -6,40 +6,48 @@
 <main>
     <!-- checkt of er iets posted is -->
     <% if(plantjePosted) { %>
-        <p>posted</p>
+        <span class="span-posted">Posted</span>
     <% } else { %>
-        <p>niet posted</p>
+        <span class="span-niet-posted">Niet posted</span>
         <% } %>
-    <h1>Voeg hier je nieuwe plantje toe!</h1>
+    <h1 class="admin-h1">Voeg hier je nieuwe plantje toe!</h1>
 
-    <h2>Plant gegevens</h2>
-    <form action="/submitted" method="post">
+    <h2 class="admin-h2">Plant gegevens</h2>
+    <form class="admin-form" action="/submitted" method="post">
         <div>
-            <label for="datum">Aanmelddatum: <input type="text" name="datum"></label>
+            <label for="datum">Aanmelddatum</label>
+            <input class="input-field-text" type="text" name="datum">
         </div>
         <div>
-            <label for="naam">Naam: <input type="text" name="naam" required></label>
+            <label for="naam">Naam<span class="must-input-field">*</span></label>
+            <input class="input-field-text" type="text" name="naam" required>
         </div>
         <div>
-            <label for="landvanherkomst">Land van herkomst: <input type="text" name="landvanherkomst"></label>
+            <label for="landvanherkomst">Land van herkomst</label>
+            <input class="input-field-text" type="text" name="landvanherkomst">
         </div>
         <div>
-            <label for="giftig">Giftig: <input type="text" name="giftig" required></label>
+            <label for="giftig">Giftig</label>
+            <input class="input-field-text" type="text" name="giftig">
         </div>
         <div>
-            <label for="slug">Slug (voorbeeld: calathea-fusion-white"): <input type="text" name="slug"></label>
+            <label for="slug">Slug (voorbeeld: calathea-fusion-white")</label>
+            <input class="input-field-text" type="text" name="slug">
         </div>
         <div>
-            <label for="verpotten">Verpotten: <input type="text" name="verpotten"></label>
+            <label for="verpotten">Verpotten</label>
+            <input class="input-field-text" type="text" name="verpotten">
         </div>
         <div>
-            <label for="voeding">Voeding: <input type="text" name="voeding"></label>
+            <label for="voeding">Voeding</label>
+            <input class="input-field-text" type="text" name="voeding">
         </div>
         <div>
-            <label for="fotos">Foto's: <input type="text" name="fotos" required></label>
+            <label for="fotos">Foto's</label>
+            <input class="input-field-text" type="text" name="fotos">
         </div>
         <div>
-            <input type="submit" value="Voeg plantje toe">
+            <input class="add-stekje-input" type="submit" value="Voeg plantje toe">
         </div>
     </form>
 </main>
