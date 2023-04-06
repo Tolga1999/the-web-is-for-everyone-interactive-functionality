@@ -55,7 +55,7 @@ Download de stabiele versie 18.14.0 LTS, open je terminal binnen de code editior
 
 - NPM install, dit om express, ejs en alle andere afhankelijkheden te downloaden.
 - NPM start om je applicatie te runnen, je lokale server wordt meestal gerunned op port 8000.
-- Optioneel: je kan de applicatie ook runnen met een script, zo kan je npm run dev gebruiken ipv npm start. Dit zorgt ervoor dat de applicatie automatisch aan en uit wordt gezet na een verandering binnen de server side (met deze optie is het handmatig aan en uitzetten van de applicatie niet meer nodig).
+- Optioneel: je kan de applicatie ook runnen met een script, zo kan je npm run dev gebruiken ipv npm start (er wordt dan gebruik gemaakt van nodemon). Dit zorgt ervoor dat de applicatie automatisch aan en uit wordt gezet na een verandering binnen de server side (met deze optie is het handmatig aan en uitzetten van de applicatie niet meer nodig).
 
 ## Bronnen
 - Node download: https://nodejs.org/en/
