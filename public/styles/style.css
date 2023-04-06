@@ -12,9 +12,11 @@
     --background-color-blue: #333467;
     --background-color-green: #6A9C40;
     --background-color-grey: #EEEFF2;
+    --background-color-red: red;
     --text-color-white: #FFF;
     --text-color-black: #000000;
     --text-color-green: #6A9C40;
+    --text-color-red: red;
 }
 
 /* import fonts */
@@ -220,20 +222,20 @@ ul li a:hover{
 }
 
 .stekje-details{
-    padding-left: 5em;
-    padding-top: 3em;
+    padding: 5em;
+    padding-right: 0;
 }
 
 .stekje-details > span{
     display: block;
     font-family: inter-bold, Helvetica, sans-serif;
-    margin-bottom: 0.5em;
 }
 
 .stekje-details > h1{
     font-size: 3.5em;
     font-family: inter-semi-bold, Helvetica, sans-serif;
     margin: 0.75em 0;
+    margin-top: 0.4em;
 }
 
 .stekje-icons-detail{
@@ -251,6 +253,14 @@ ul li a:hover{
     max-width: 15em;
 }
 
+.stekje-icons-detail > div:nth-child(1){
+    padding-left: 0;
+}
+
+.stekje-icons-detail > div:nth-child(4){
+    border-right: none;
+}
+
 .name-stekje-icon{
     color: var(--text-color-green);
     font-family: inter-semi-bold, Helvetica, sans-serif;
@@ -263,13 +273,12 @@ ul li a:hover{
 
 .stekje-description-detail{
     line-height: 1.4;
-    width: 60%;
+    width: 70%;
     margin: 2.5em 0;
 }
 
 .stekje-details-ruilen-button{
     font-size: 1.5em;
-    margin-bottom: 2.5em;
     font-size: 1em;
     padding: 0.8em 1.75em;
     color: var(--text-color-white);
@@ -279,6 +288,61 @@ ul li a:hover{
     cursor: pointer;
 }
 /* INDIVIDUELE STEKJE PAGINA END */
+
+/* admin page */
+.span-posted{
+    color: var(--text-color-green);
+}
+
+.span-niet-posted{
+    color: var(--text-color-red);
+}
+
+.admin-h1{
+    margin: 0.75em 0;
+}
+
+.admin-h2{
+    margin: 1em 0;
+}
+
+.admin-form{
+    background-color: var(--background-color-grey);
+    padding: 2em;
+    width: 50%;
+}
+
+.admin-form > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75em 0;
+}
+
+.must-input-field{
+    color: var(--text-color-red);
+}
+
+.input-field-text{
+    padding: 0.4em;
+    width: 20em;
+}
+
+.input-field-text:invalid{
+    border: 2px solid var(--background-color-red);
+    color: var(--text-color-white);
+}
+
+.add-stekje-input{
+    font-size: 1em;
+    padding: 0.8em 1.75em;
+    color: var(--text-color-white);
+    background-color: var(--background-color-green);
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+    /* margin-top: 1em; */
+}
+/* admin page end */
 
 /* desktop media query */
 @media screen and (min-width: 1020px) {
