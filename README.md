@@ -48,6 +48,14 @@ In dit project zijn de volgende technieken gebruikt:
 - Express
 - EJS
 
+Dit project is gebouwd door gebruik van progressive enhancement. Progressive Enhancement is een (coding) strategy waarmee je er voor kan zorgen dat je website het altijd doet. De volgende stappen neem je binnen progressive enhancement:
+
+1. Eerst bouw je de core functionality van je website in HTML en met behulp van NodeJS, met als voorbeeld voor het server-side afhandelen van het posten van data. (Content layer). Dit wilt zeggen dat je website al complete moet werken binnen deze fase.
+2. Daarna voeg je CSS toe voor feedback voor de gebruiker en om de huisstijl toe te passen (Presentation layer).
+3. Tot slot kan je client side scripting toevoegen voor een betere User Experience (Client-side scripting).
+
+Progressive Enhancement zorgt ervoor dat een website voor iedereen werkt, ook als je CSS of JS niet werkt op de apparaat dat je gebruikt.
+
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 Voordat je de applicatie kan runnen moet je node runnen op je lokale computer, Node kan je downloaden op de volgende website: https://nodejs.org/en/.
