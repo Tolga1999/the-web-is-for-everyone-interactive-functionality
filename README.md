@@ -2,7 +2,7 @@
 
 # Plantswap overzichtspagina + detailpagina's
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
-Een overzichtspagina en meerdere detailpagina's voor de beschikbare planten binnen Plantswap, verder is het mogelijk om plantjes toe teo voegen als een admin. 
+Een overzichtspagina en meerdere detailpagina's voor de beschikbare planten binnen Plantswap, verder is het mogelijk om plantjes toe te voegen als een admin. 
 
 ## Inhoudsopgave
 
@@ -32,6 +32,11 @@ De volgende stappen kan je nemen om gebruik te maken van de Plantswap pagina:
 1. Een plantje kiezen uit de overzichtspagina.
 2. Klikken op een plantje en meer informatie lezen over het gekozen plantje.
 3. De keuze nemen om het plantje te ruilen, een ruilknop staat onder de detailpagina voor deze optie.
+
+admin:
+1. Ga naar de admin page
+2. Vul de gegevens van het nieuwe stekje in
+3. Klik op "voeg stekje toe", de nieuwe stekje zal in de overzichtspagina tevoorschijn komen (dit kan enkele seconden duren).
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
