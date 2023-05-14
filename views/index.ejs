@@ -12,18 +12,17 @@
             <input class="h1-input" type="text" placeholder="Wat voor stekje zoek je?">
             <button class="h1-ruil-button">Zoek stekje</button>
         </div>
-        <img class="homepage-image" src="./assets/homepagePlant.jpg" alt="homepagina plant">
+        <img class="homepage-image" src="./assets/homepagePlant.jpg" alt="homepagina plant" width="500px">
     </section>
 
     <section class="stekjes" id="stekjes-scroll">
         <% stekjes.forEach(stekje => { %>
         <section class="stekje-container">
             <% if (stekje.fotos[0]) { %>
-            <img src="<%=stekje.fotos[0].original %>" width="<%=stekje.fotos[0].width%>"
-                height="<%= stekje.fotos[0].heigth %>" alt="stekje <%= stekje.naam %>">
+            <img src="<%=stekje.fotos[0].original %>" width="300px" alt="stekje <%= stekje.naam %>">
             <% }else{ %>
             <!-- anders een placeholder -->
-            <img src="./assets/plant2.jpg">
+            <img src="./assets/plant2.jpg" width="300px">
             <% } %>
             <div class="stekje-container-info">
                 <span>Populaire stekje</span>
